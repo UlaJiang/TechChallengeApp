@@ -9,6 +9,6 @@ services:
     ports:
       - 5432:5432
   myapp:
-    image: servian:v7
+    image: servian/myapp:v2
     ports:
       - 3000:3000
