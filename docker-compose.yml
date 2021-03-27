@@ -1,4 +1,4 @@
-version: "3"
+version: "2.1"
 services:
   mypostgres:
     image: postgres:9.6
@@ -8,7 +8,12 @@ services:
       POSTGRES_DB: app
     ports:
       - 5432:5432
+    healthcheck:
+      test: "exit 0"
   myapp:
     image: servian/myapp:v2
     ports:
       - 3000:3000
+    depends_on: 
+      mypostgres:
+        condition: service_healthy
