@@ -11,9 +11,9 @@ services:
     healthcheck:
       test: "exit 0"
   myapp:
-    image: servian/myapp:v2
+    image: ulajiang0419/servian_app:v1
     ports:
-      - 3000:3000
+      - 80:3000
     depends_on: 
       mypostgres:
         condition: service_healthy
