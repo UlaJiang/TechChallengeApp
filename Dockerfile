@@ -37,4 +37,3 @@ COPY --from=build /TechChallengeApp TechChallengeApp
 
 RUN echo "./TechChallengeApp updatedb; ./TechChallengeApp serve" > run.sh
 ENTRYPOINT [ "/bin/sh", "run.sh" ]
-# ENTRYPOINT [ "./TechChallengeApp", "serve" ]
