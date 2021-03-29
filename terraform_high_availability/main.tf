@@ -40,3 +40,8 @@ module "postgres" {
   rds_subnet2 = "${module.vpc.private_subnet2}"
   vpc_id      = "${module.vpc.vpc_id}"
 }
+
+# output "alb-dns" {
+#   value = "${module.ald.alb_dns_name}"
+# }
+

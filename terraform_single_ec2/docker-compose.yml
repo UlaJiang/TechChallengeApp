@@ -1,0 +1,19 @@
+version: "2.1"
+services:
+  mypostgres:
+    image: postgres:9.6
+    environment:
+      POSTGRES_PASSWORD: changeme
+      POSTGRES_USER: postgres
+      POSTGRES_DB: app
+    ports:
+      - 5432:5432
+    healthcheck:
+      test: "exit 0"
+  myapp:
+    image: ulajiang0419/servian_app:v1
+    ports:
+      - 80:3000
+    depends_on: 
+      mypostgres:
+        condition: service_healthy

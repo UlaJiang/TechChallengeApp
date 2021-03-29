@@ -10,8 +10,8 @@ resource "aws_db_instance" "my-test-sql" {
   engine_version          = "9.6"
   multi_az                = true
   storage_type            = "gp2"
-  allocated_storage       = 120
-  name                    = "apppostgres"
+  allocated_storage       = 20
+  name                    = "app"
   username                = "postgres"
   password                = "changeme"
   apply_immediately       = "true"
