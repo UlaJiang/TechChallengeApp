@@ -19,6 +19,7 @@ I have 2 solutions with a bit different architectures:
   2) Deploy 2 EC2 with application doccker container running inside, one in each public-subnet. 
   3) Deploy high availability postgres RDS, one primary in one of the private-subnet, and one replica in another private-subnet. 
   4) Deploy an Application Load Balance in front of those EC2.
+![plot](./screenshot/architecture.png?raw=true)
 
 ## Following files have been changed
 **1. conf.toml**
