@@ -1,7 +1,5 @@
 provider "aws" {
   region = "ap-southeast-2"
-  access_key = var.access_key
-  secret_key = var.secret_key
 }
 
 data "template_file" "init" {
@@ -9,7 +7,7 @@ data "template_file" "init" {
 }
 
 resource "aws_key_pair" "techapp-key" {
-  key_name   = "techapp-key"
+  key_name   = "techapp_servian-key"
   public_key = "${file(var.my_public_key)}"
 }
 

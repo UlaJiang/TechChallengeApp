@@ -1,5 +1,17 @@
 provider "aws" {
   region = "ap-southeast-2"
+  access_key = var.access_key
+  secret_key = var.secret_key
+}
+
+variable "access_key" {
+  description = "please input your access key"
+  type = string
+}
+
+variable "secret_key" {
+  description = "please input your secret key"
+  type = string
 }
 
 module "vpc" {
@@ -41,7 +53,7 @@ module "postgres" {
   vpc_id      = "${module.vpc.vpc_id}"
 }
 
-# output "alb-dns" {
-#   value = "${module.ald.alb_dns_name}"
-# }
+output "alb-dns" {
+  value = "${module.alb.alb_dns_name}"
+}
 
