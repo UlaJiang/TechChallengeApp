@@ -1,13 +1,11 @@
 variable "access_key" {
-  # description = "please input your access key"
-  default = "AKIAQHQSEA57SRPODS4B"
-  # type = string
+  description = "please input your access key"
+  type = string
 }
 
 variable "secret_key" {
-  # description = "please input your secret key"
-  # type = string
-  default = "YhTehbcqC4xlYHhs+/D8g+8E0Z53JbbY6BpNGtKV"
+  description = "please input your secret key"
+  type = string
 }
 
 variable "vpc_cidr" {
@@ -25,7 +23,3 @@ variable "private_cidrs" {
 variable "availability_zones" {
   default = "ap-southeast-2a"
 }
-
-# variable "my_public_key" {
-#   default = "~/.ssh/id_rsa.pub"
-# }

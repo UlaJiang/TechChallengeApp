@@ -135,7 +135,7 @@ data "template_file" "init" {
 }
 
 resource "aws_key_pair" "techapp-key" {
-  key_name   = "techapp-key"
+  key_name   = "app-key"
   public_key = "${file("~/.ssh/id_rsa.pub")}"
 }
 
